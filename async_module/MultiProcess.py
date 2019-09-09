@@ -30,6 +30,7 @@ class MultiProcess:
             response += chunk
             # blocking
             chunk = http_sock.recv(4096)
+        http_sock.close()
         return response
 
     def process_way(self):
